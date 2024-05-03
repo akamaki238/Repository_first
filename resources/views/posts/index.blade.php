@@ -8,11 +8,16 @@
     </head>
     <body>
         <h1>Blog Name</h1>
+        @foreach ($posts as $post)
         <div class='posts'>
             <div class='post'>
-                <h2 class='title'>Title</h2>
+                <h2 class='title'>
+                    <a href="/posts/{{ $post->id }}">{{ $post->title }}</a>
+                </h2>
                 <p class='body'>This is a sample body.</p>
+                
             </div>
+        @endforeach
         </div>
     </body>
 </html>
